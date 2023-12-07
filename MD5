@@ -1,0 +1,10 @@
+92e8ab8d03cd31d516ee13f765b05581 *DESCRIPTION
+29cb655da09f9221fb9eeae369e85db0 *NAMESPACE
+fcb83fe9cd21f1855a2ba58450651d79 *R/main.R
+faa7af1f7e33a44b658b735e629d90e6 *build/vignette.rds
+fcd7f2cf6f72bf37e66ee56ff8b321d6 *inst/doc/tutorial.R
+e2372860b5772570485b4f7eb8c2f621 *inst/doc/tutorial.Rmd
+e46c42d41ffd2d0a1cb762e94277cb3f *inst/doc/tutorial.html
+99d0ad3b771cf61993c559a45a7ddac0 *man/getSize.Rd
+e24f7e996d80d256063e1ea32dca6fe6 *vignettes/GenTwoArmsTrialSize.bib
+e2372860b5772570485b4f7eb8c2f621 *vignettes/tutorial.Rmd

@@ -1,0 +1,66 @@
+---
+title: "GenTwoArmsTrialSize"
+author: 
+- Mohsen Soltanifar
+- Chel Hee Lee
+package: GenTwoArmsTrialSize
+date: "`r Sys.Date()`"
+vignette: >
+  %\VignetteIndexEntry{tutorial}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+bibliography: "GenTwoArmsTrialSize.bib"
+nocite: |
+  @Chow2018, @Wittes2002, @Sato2000, @Lachin1986, @Whitehead1993, @Julious2023
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(GenTwoArmsTrialSize)
+```
+
+# Examples 
+
+* Example 1. Sample Size for two arms continuous end point clinical trial with noncompliance and expected loss of follow-up
+
+```{r}
+getSizeMean(design="parallel", test="equivalence", alpha=0.05, 
+            beta=0.20, sigma=0.10, k=1, delta=0.05, TTE=0.01, 
+            rho=c(0.05, 0.07), r=0.1)
+```
+
+* Example 2. Sample Size for two arms binary end point clinial trial with noncompliance and expected loss of follow-up
+
+```{r}
+getSizeProp(design="crossover", test="superiority", alpha=0.05,
+            beta=0.20, varsigma=c(0.5, 0.5), k=1, seqnumber=2,
+            delta=0.10, TTE=0, rho=c(0.05, 0.07), r=0.1)
+```
+
+
+* Example 3. Sample Size for two arms time to event point clinial trial with noncompliance and expected loss of follow-up
+
+```{r}
+getSizeTTE(design="parallel", test="equality", alpha=0.05, beta=0.20,
+           varlambda=c(1,2), k=1, ttotal=3, taccrual=1, 
+           gamma=0.00001, delta=1, rho=c(0.05, 0.07), r=0.1)
+```
+
+* Example 4: Sample Size for two arms ordinal point clinial trial with noncompliance and expected loss of follow-up
+
+```{r}
+getSizeOrd(design="parallel", test="equality", alpha=0.05, beta=0.10,
+           varcatprob= list(c(0.2,0.5,0.2,0.1),
+                            c(0.378,0.472,0.106,0.044)), 
+           k=1, theta=0.877, delta=0, rho=c(0.05, 0.07), r=0.1)
+```
+
+# References 
